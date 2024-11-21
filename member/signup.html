@@ -18,6 +18,11 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    <style>
     .font-color {color: #005B48; font-size: 30px;}
+    .donation {background-color: #005B48; color: white; font-size: 30px; margin-right: 30px; }
+        .signup {margin-right: 20px;}
+        .sign {margin-top: 50px; color: #005B48;}
+        .sign a:link { color: #005B48; }
+        .donation:hover { color: #005B48;}
     body{
         font-family: 'MinSans', sans-serif;
 
@@ -26,14 +31,43 @@
         color: #009273;
     }
     .textwidth{
-        width: 50%;
+        width: 40%;
+        
     }
-    a{
-        text-decoration: none;
-        color: black;
+    .dot {
+        height: 25px;
+        width: 25px;
+        background-color: #FB8F7D;
+        border-color: #005B48;
+        border: 1px solid;
+        border-radius: 50%;
+        display: inline-block;
     }
-    .font-size{
-        font-size: 13px;
+    .dot2 {
+        height: 25px;
+        width: 25px;
+        background-color: rgb(0, 91, 72,0.4);
+        border-color: #005B48;
+        border: 1px solid;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    .divwrap{
+        margin-left: 25%;
+    }
+    .circlewrap{
+        margin-left: 26%;
+    }
+    .circlehr{
+        margin: 1px;
+        padding: 1px;
+        margin-bottom: 3px;
+    }
+    .spanwrap{
+        margin-left: 23%;
+    }
+    label{
+        margin-left: 15%;
     }
 </style>
 <link rel='stylesheet' type='text/css'href='../font/font.css'>
@@ -44,7 +78,7 @@
         <header class="container-fluid">     
             <nav class="navbar bg-light navbar-expand-sm">
                 <ul class="navbar-nav container justify-content-start">
-                    <a href="index.html" class="float-start"><img src="../logo.png" alt="로고" class="img-fluid" width="250"></a>
+                    <a href="index.html" class="float-start"><img src="../img/logo.png" alt="로고" class="img-fluid" width="250"></a>
                     <li class="mx-3 nav-item"><a class="nav-link text-success" href="index.html"><b class="font-color">공지사항</b></a></li>
                     <li class="mx-3 nav-item"><a class="nav-link text-success" href="mypage.html"><b class="font-color">자료실</b></a></li>
                     <li class="mx-3 nav-item"><a class="nav-link text-success" href="post.html?category=1"><b class="font-color">봉사인증</b></a></li>
@@ -55,32 +89,53 @@
                             <li><a class="dropdown-item" href="post.html?category=3">질문과답변</a></li>
                         </ul>
                     </li>
-
-                    <button class="float-end">후원하기</button>
-
+                    
+                    
                 </ul>
+                <ul class="sign">
+                       <a href="signin" class="small float-start text-decoration-none">로그인</a>
+                       <a href="#" class="small float-start text-decoration-none vertical mx-3"><p> | </p></a>
+                       <a href="signup" class="small float-start text-decoration-none signup">회원가입</a>
+                
+                </ul>
+                <a href="donation" class="btn btn-block btn-sm col-1 donation">후원하기</a>
+               
             </nav>
         </header>
-        <main class="container">
-            <div class="card mt-5 w-75" style="margin-left: 15%;">
-                <div class="text-center mt-5">
-                    <p class="font-color bold-text"><span class="font-angel">천사 </span> 회원님, 반갑습니다</p>
-                    <p>홈페이지 로그인을 통해, 나의 후원 정보 및 결연아동의 소식,</p>
-                    <p>후원 중인 사업 내용, 회원 전용 커뮤니티 등 다양한 서비스를 이용해 보세요.</p>
-                </div>
-
-                <form name = "frm"class="mx-auto col-12 col-sm-9 p-2 " method="post">
-                    <input type="text" class=" form-control textwidth" id="id" placeholder="아이디" name="id" >
-                    <input type="password" class="form-control my-3 textwidth" id="pwd" placeholder="비밀번호" name="pw">
-                    <button class=" btn textwidth" style="background-color: #005B48; color: white;">로그인</button>
-                    <div class=" form-check form-switch my-3">
-                        <input class="form-check-input" type="checkbox" id="mySwitch" name="remember-id" value="yes">
-                        <label class="form-check-label font-size" for="mySwitch">아이디 저장</label>
-                        <a href="#" class="font-size" style="margin-left: 8%;">아이디</a> <span class="font-size mx-1"> / </span> <a href="#" class="font-size"><span >비밀번호찾기</span></a><span class="font-size mx-1"> | </span><a href="#"><span class="font-size">회원가입</span></a>
+        <main class="container card w-50 mt-5" style="margin-left: 25%;">
+            <div class="mt-3 w-100">
+                <div class="row" >
+                    <div class="divwrap" >
+                        <span class="bold-text">Step 1</span><span style="margin-left: 40%;">Step 2</span>
                     </div>
-                    
-                    <button class="btn btn-primary mb-5">카카오 로그인</button>
-        
+                    <div class="col-6 circlewrap mt-2">
+                        <span class="dot float-start" style="margin: 1px;" ></span><hr class="d-inline-block circlehr" style="width: 88%;"><span class="dot2 float-end" style="margin: 0px;"></span>
+                    </div>
+                    <div class="spanwrap mt-2">
+                        <span class="bold-text">후원정보 확인</span> <span style="margin-left: 35%">홈페이지 ID 만들기</span>
+                    </div>
+                </div>
+                <hr style="width: 80%;margin-left: 10%;">
+                <div class="w-100 text-center">
+                    <p style="font-size: 30px"><span class="font-color bold-text">기부천국</span> 홈페이지 <span class="font-color bold-text" style="color:#FF0000">가입</span>을 환영합니다</p>
+                    <p>기부천국은 천사 회원님을 환영합니다</p>
+                </div>
+                <form name = "frm"class="mx-auto col-12 col-sm-9 p-2 " method="post">
+                <div >
+                    <div class="row ">
+                    <label for="name" class="col-2 mt-2"  >이름</label><input type="text" class="col-3 form-control textwidth" id="name">
+                    </div>
+                    <div class="row mt-3">
+                        <label for="birthday" class="col-2 mt-2">생년월일</label><input type="password" class="form-control col-3 textwidth" id="birthday" name="birthday">
+                    </div>
+                    <div class="row mt-3 ">
+                        <label for="name" class="col-2 mt-2" >휴대전화 번호</label><input type="text" class="col-3 form-control" style=" width: 30%;" id="name"><button class="btn" style="background-color: #005B48; color: white; width: 10%">인증</button>
+                    </div>
+                    <div class="row mt-3">
+                            <label for="birthday" class="col-2 mt-2">인증번호</label><input type="password" class="form-control col-3 textwidth" id="birthday" name="birthday">
+                    </div>
+                    <button class="btn mt-3 mb-5" style="background-color: #005B48; color: white; width: 40%;margin-left: 31%;" >다음 단계</button>
+                </div>
                 </form>
             </div>
         </main>
