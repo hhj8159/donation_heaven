@@ -30,15 +30,26 @@
         .donation:hover { color: #005B48;}
         .footer {background-color: #005B48; color: white;}
         .notice{
-            max-width: 70px;
+            max-width: 75px;
             overflow: hidden;
+            position: fixed;
+            margin-left: 77%;
+            margin-top: 10%;
             }
 
         .notice img{
                 max-width: initial;
-                margin-left: 73%;
             }
-            .h1 {text-align: center;}
+        .main{
+            margin-bottom: 20%;
+        }
+        .box {
+            border: 2px solid black;
+            padding: 100px;
+            text-align: center;
+            }
+        .gallery {font-size: 35px;}
+        .certifi {color: #005B48;}
     </style>
         <link rel='stylesheet' type='text/css'href='./font/font.css'>
    <body>
@@ -62,24 +73,37 @@
                 </ul>
                 <ul class="sign">
                        <a href="signin" class="small float-start text-decoration-none">로그인</a>
-                       <a href="#" class="small float-start text-decoration-none vertical mx-3"><p> | </p></a>
+                       <a href="#" class="small float-start text-decoration-none vertical mx-3" style="color: #005B48;"><p> | </p></a>
                        <a href="signup" class="small float-start text-decoration-none signup">회원가입</a>
-                
                 </ul>
                 <a href="donation" class="btn btn-block btn-sm col-1 donation">후원하기</a>
                
             </nav>
         </header>
-        <main class="container">
+        <main class="container main">
             <div class="row">
-            <div class="col-md-9">
-                <h1>이미지 슬라이드 구간</h1>
+                <div class="col-md-12">
+                    <ul class="box mt-5">
+                        <h1>이미지 슬라이드 구간</h1>
 
+                    </ul>
+                    <div class="gallery">
+                            <b>
+                                <span>아이들의 행복을 더하는 </span>
+                                <span class="certifi">봉사 인증</span>
+                            </b>
+                            
+                        
+                    </div>
+                
+                
             <div class="notice float-end">
-                <a href="#" class="float-end"><img src="img/logo.png" alt="알림로고" class="img-fluid" width="250"></a>
+                <a href="#" class=""><img src="img/logo.png" alt="알림로고" class="img-fluid" width="250"></a>
             </div>
-        </main>
-        <footer class="text-center p-3 footer">
+            
+            </main>
+
+        <footer class="text-center p-3 footer ">
             <address></address>도네이션헤븐 기부천국 | 사업자등록번호 000-00-00000 | 조장 함형준 | 서울특별시 구로구 디지털로 306, 203, 205, 212호 (구로동, 대륭포스트타워 2차) <br>| 대표전화 0000-0000 | 팩스 00-000-000 
             <p>All rights resereved &copy; copyright.</p>
         </footer>
