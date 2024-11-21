@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Donation Heaven</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+   <!-- bootstrap  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <!-- jquery -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <!-- bxslider -->
+   <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+   <!-- font-awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+   <link rel='stylesheet' type='text/css'href='../font/font.css'>
+    <style>
+        .font-color {color: #005B48; font-size: 30px;}
+        .green-color { color: #005B48; }
+       
+        body{
+            font-family: 'MinSans', sans-serif;
+        }
+        .bold-text {
+           font-family: 'MinSans', sans-serif;
+            font-weight: 700;
+        }
+         /* .pagination a {
+        padding: 0 14px;
+        line-height: 34px;
+        color: #005B48;
+        text-decoration: none;
+        border: none;
+        border-left-width: 0; 
+        }
+
+        .pagination a:active {
+        padding: 0 14px;
+        line-height: 34px;
+        color: #005B48;
+        text-decoration: underline;
+        border: none;
+        border-left-width: 0; 
+        }
+*/
+
+
+        .pagination a:hover { background-color: #ffffff; font: #005B48;}
+        
+
+    </style>
+   <body>
+    <div class="wrap">
+        <header class="container-fluid">     
+            <nav class="navbar bg-white navbar-expand-sm">
+                <ul class="navbar-nav container justify-content-start">
+                    <a href="index.html" class="float-start"><img src="../logo.png" alt="로고" class="img-fluid" width="250"></a>
+                    <li class="mx-3 nav-item"><a class="nav-link text-success" href="index.html"><b class="font-color">공지사항</b></a></li>
+                    <li class="mx-3 nav-item"><a class="nav-link text-success" href="mypage.html"><b class="font-color">자료실</b></a></li>
+                    <li class="mx-3 nav-item"><a class="nav-link text-success" href="post.html?category=1"><b class="font-color">봉사인증</b></a></li>
+                    <li class="mx-3 nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-success" href="#" role="button" data-bs-toggle="dropdown"><b class="font-color">커뮤니티</b></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="post.html?category=2">자유게시판</a></li>
+                            <li><a class="dropdown-item" href="post.html?category=3">질문과답변</a></li>
+                        </ul>
+                    </li>
+
+                    <button class="float-end">후원하기</button>
+
+                </ul>
+            </nav>
+        </header>
+        <!-- md lg 등도 고려해야함 -->
+        <main class="container">
+            <h2 class="mt-5 font-color bold-text;"><b>공지사항</b></h2>
+            <form>	 
+                <div class="row my-3">
+                    <div class="col-8"></div>
+                    <div class="col-1 pe-0"> 
+                        <select class="form-select form-select-sm" name="type">
+                            <option value="T" selected>제목</option>
+                            <option value="TC">제목+내용</option>
+                            <option value="W">작성자</option>				
+                        </select>
+                    </div>
+                    <div class="col-3 ps-0">
+                        <div class="float-end">
+                            <div class="input-group">
+                                <input class="text">
+                                <button href="#" class="btn btn-sm btn-secondary">검색</button>
+                            </div>
+                        </div>
+                    </div>	
+                </div>
+			</form>
+            
+            <table class="table text-center" style="table-layout: fixed;">
+                <thead>
+                <tr class="table-active">
+                    <th style="width: 15%;">글번호</th>
+                    <th>제목</th>
+                    <th style="width: 15%;">작성일</th>
+                    <th style="width: 15%;">조회수</th>
+                </tr>
+                </thead>
+                
+                <tbody>
+                <tr>
+                    <td>2</td>
+                    <td class="text-truncate text-start"><a href="#" class="page-link link-dark text-decoration-none">제목제제목제목제목제목제목제목</a></td>
+                    <td>2014/11/07</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="text-truncate text-start"><a href="#" class="page-link link-dark text-decoration-none">제목제제목제목제목제목제목제목</a></td>
+                    <td>2014/11/07</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="text-truncate text-start"><a href="#" class="page-link link-dark text-decoration-none">제목제제목제목제목제목제목제목</a></td>
+                    <td>2014/11/07</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="text-truncate text-start"><a href="#" class="page-link link-dark text-decoration-none">제목제제목제목제목제목제목제목</a></td>
+                    <td>2014/11/07</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="text-truncate text-start"><a href="#" class="page-link link-dark text-decoration-none">제목제제목제목제목제목제목제목</a></td>
+                    <td>2014/11/07</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="text-truncate text-start"><a href="#" class="page-link link-dark text-decoration-none">제목제제목제목제목제목제목제목</a></td>
+                    <td>2014/11/07</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="text-truncate text-start"><a href="#" class="page-link link-dark text-decoration-none">제목제제목제목제목제목제목제목</a></td>
+                    <td>2014/11/07</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="text-truncate text-start"><a href="#" class="page-link link-dark text-decoration-none">제목제제목제목제목제목제목제목</a></td>
+                    <td>2014/11/07</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="text-truncate text-start"><a href="#" class="page-link link-dark text-decoration-none">제목제제목제목제목제목제목제목</a></td>
+                    <td>2014/11/07</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="text-truncate text-start"><a href="#" class="page-link link-dark text-decoration-none">제목제제목제목제목제목제목제목</a></td>
+                    <td>2014/11/07</td>
+                    <td>0</td>
+                </tr>
+                </tbody>
+            </table>
+
+             <ul class="pagination justify-content-center my-5 bs-pagination-hover-color-danger">
+                <li class="page-item"><a class="page-link link-success border-white green-color" href="#"><i class="fa-solid fa-angles-left"></i></a></li>
+                <li class="page-item"><a class="page-link link-success border-white green-color" href="#"><i class="fa-solid fa-angle-left"></i></a></li>
+                <li class="page-item"><a class="page-link border-white bold-text text-secondary" href="#">1</a></li>
+                <li class="page-item"><a class="page-link border-white bold-text text-secondary" href="#">2</a></li>
+                <li class="page-item"><a class="page-link link-success border-white green-color" href="#"><i class="fa-solid fa-angle-right"></i></a></li>
+                <li class="page-item"><a class="page-link link-success border-white green-color" href="#"><i class="fa-solid fa-angles-right"></i></a></li>
+              </ul>
+              
+        </main>
+        <footer class="bg-success text-center p-3">
+            <address></address>도네이션헤븐 기부천국 | 사업자등록번호 000-00-00000 | 조장 함형준 | 대표이사 함형준 서울특별시 구로구 디지털로 306, 203, 205, 212호 (구로동, 대륭포스트타워 2차) <br>| 대표전화 0000-0000 | 팩스 00-000-000 
+            <p>All rights resereved &copy; copyright.</p>
+        </footer>
+    </div>
+</body>
+</html>
