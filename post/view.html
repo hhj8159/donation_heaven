@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    
+
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Donation Heaven</title>
@@ -9,44 +10,69 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-   <!-- bootstrap  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <!-- jquery -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <!-- bxslider -->
-   <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
-   <!-- font-awesome -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
-   <link rel='stylesheet' type='text/css'href='../font/font.css'>
-    <style>
-        .font-color {color: #005B48; font-size: 30px;}
-        .green-color { color: #005B48; }
-        .green-bg-color {background-color:#005B48; }
-       
-        body{
-            font-family: 'MinSans', sans-serif;
-        }
-        .bold-text {
-            font-family: 'MinSans', sans-serif;
-            font-weight: 700;
-        }
-        .btn-custom:hover {
-            opacity: 1;
-        }
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+        integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- bxslider -->
+    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<link rel='stylesheet' type='text/css' href='../font/font.css'>
+<style>
+    .font-color {
+        color: #005B48;
+        font-size: 30px;
+    }
 
-    </style>
-   <body>
+    .green-color {
+        color: #005B48;
+    }
+
+    .green-bg-color {
+        background-color: #005B48;
+    }
+
+    body {
+        font-family: 'MinSans', sans-serif;
+    }
+
+    .bold-text {
+        font-family: 'MinSans', sans-serif;
+        font-weight: 700;
+    }
+
+    .btn-custom:hover {
+        opacity: 1;
+    }
+</style>
+
+<body>
     <div class="wrap">
-        <header class="container-fluid">     
+        <header class="container-fluid">
             <nav class="navbar bg-white navbar-expand-sm">
                 <ul class="navbar-nav container justify-content-start">
-                    <a href="index.html" class="float-start"><img src="../logo.png" alt="로고" class="img-fluid" width="250"></a>
-                    <li class="mx-3 nav-item"><a class="nav-link text-success" href="index.html"><b class="font-color">공지사항</b></a></li>
-                    <li class="mx-3 nav-item"><a class="nav-link text-success" href="mypage.html"><b class="font-color">자료실</b></a></li>
-                    <li class="mx-3 nav-item"><a class="nav-link text-success" href="post.html?category=1"><b class="font-color">봉사인증</b></a></li>
+                    <a href="index.html" class="float-start"><img src="../logo.png" alt="로고" class="img-fluid"
+                            width="250"></a>
+                    <li class="mx-3 nav-item"><a class="nav-link text-success" href="index.html"><b
+                                class="font-color">공지사항</b></a></li>
+                    <li class="mx-3 nav-item"><a class="nav-link text-success" href="mypage.html"><b
+                                class="font-color">자료실</b></a></li>
+                    <li class="mx-3 nav-item"><a class="nav-link text-success" href="post.html?category=1"><b
+                                class="font-color">봉사인증</b></a></li>
                     <li class="mx-3 nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-success" href="#" role="button" data-bs-toggle="dropdown"><b class="font-color">커뮤니티</b></a>
+                        <a class="nav-link dropdown-toggle text-success" href="#" role="button"
+                            data-bs-toggle="dropdown"><b class="font-color">커뮤니티</b></a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="post.html?category=2">자유게시판</a></li>
                             <li><a class="dropdown-item" href="post.html?category=3">질문과답변</a></li>
@@ -61,10 +87,12 @@
         <main class="container">
             <div class="clearfix py-4">
                 <h2 class="mt-5 font-color bold-text float-start"><b>공지사항</b></h2>
-			</div>
+            </div>
             <div class="card border-start-0 border-end-0 rounded-0 border-2">
                 <div class="card-header">
-                    <div><p class="text-center" style="font-size: 20px;"><b>제목</b></p></div>
+                    <div>
+                        <p class="text-center" style="font-size: 20px;"><b>제목</b></p>
+                    </div>
                     <div>
                         <p class="text-end mb-0">작성자 mekwon</p>
                         <p class="text-end mb-0">작성일 22/05/31</p>
@@ -72,29 +100,120 @@
                         <p class="text-end mb-0">추천</p>
                     </div>
                 </div>
+
                 <div class="card-body" style="height: 515px;">본문내용</div>
                 <div class="card-footer bg-white">
                     <label class="form-label mt-3"><b>첨부파일</b></label>
                     <ul class="list-group attach-result">
-                    <li class="list-group-item">첨부파일이 없습니다.</li>            
+                        <li class="list-group-item">첨부파일이 없습니다.</li>
                     </ul>
                 </div>
-              </div>
-        
-            
-				
-                
-                <div class="text-center my-5">
-                    <a href="modify" class="btn text-light" style="background-color: #005B48; width: 70px;" onclick="return confirm('추천하시겠습니까?')">추천</a>
-                    <a href="list" class="btn text-light" style="background-color: #005B48; width: 70px;">목록</a>
-                    <a href="remove" class="btn btn-secondary text-light" style="width: 70px;">신고</a>
-                </div>
             </div>
-        </main>
-        <footer class="bg-success text-center p-3">
-            <address></address>도네이션헤븐 기부천국 | 사업자등록번호 000-00-00000 | 조장 함형준 | 대표이사 함형준 서울특별시 구로구 디지털로 306, 203, 205, 212호 (구로동, 대륭포스트타워 2차) <br>| 대표전화 0000-0000 | 팩스 00-000-000 
-            <p>All rights resereved &copy; copyright.</p>
-        </footer>
+
+            <div class="reply-writer px-3 clearfix mt-3 border-bottom">
+                <ul class="list-group-item">
+                    <li class="list-group-item">
+                        <div class="my-3">
+
+                            <p class="float-start"><b>kwon</b></p>
+                            <br>
+                        </div>
+                        <div class="my-3">
+                            <p class="float-start">댓글 내용</p>
+                            <br>
+
+                        </div>
+                        <div class="my-3">
+                            <a href="like" class="text-decoration-none text-dark float-start">추천<i
+                                    class="fa-regular fa-thumbs-up mx-3"></i></a>
+                            <div class="float-end">
+
+                                <p class="float-end mx-3">24/11/15 04:30:42</p>
+                                <a href="report" class="text-decoration-none text-dark float-end">신고</a>
+                                <a href="#" class="text-decoration-none vertical mx-3 text-dark float-end">
+                                    <p>/</p>
+                                </a>
+                                <a href="blind" class="text-decoration-none text-dark">차단</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="reply-writer px-3 clearfix mt-3 border-bottom" style="margin-left: 5%;">
+ 
+                    <span>re:<i class="fa-regular fa-comments my-3"></i><ul class="list-group-item">
+                    <li class="list-group-item"></span>
+                        <div class="my-3">
+
+                            <p class="float-start"><b>mekwon</b></p>
+                            <br>
+                        </div>
+                        <div class="my-3">
+                            <p class="float-start">댓글 내용</p>
+                            <br>
+
+                        </div>
+                        <div class="my-3">
+                            <a href="like" class="text-decoration-none text-dark float-start">추천<i
+                                    class="fa-regular fa-thumbs-up mx-3"></i></a>
+                            <div class="float-end">
+
+                                <a href="#"><i class="fa-solid fa-ellipsis-vertical text-dark"></i></a>
+                                
+                                <p class="float-end mx-3">24/11/15 04:30:42</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="reply-writer px-3 clearfix mt-3 border-bottom">
+                <ul class="list-group-item">
+                    <li class="list-group-item">
+                        <div class="my-3">
+
+                            <p class="float-start"><b>ssong2341</b></p>
+                            <br>
+                        </div>
+                        <div class="my-3">
+                            <p class="float-start">댓글 내용</p>
+                            <br>
+
+                        </div>
+                        <div class="my-3">
+                            <a href="like" class="text-decoration-none text-dark float-start">추천<i
+                                    class="fa-regular fa-thumbs-up mx-3"></i></a>
+                            <div class="float-end">
+
+                                <p class="float-end mx-3">24/11/15 04:30:42</p>
+                                <a href="report" class="text-decoration-none text-dark float-end">신고</a>
+                                <a href="#" class="text-decoration-none vertical mx-3 text-dark float-end">
+                                    <p>/</p>
+                                </a>
+                                <a href="blind" class="text-decoration-none text-dark">차단</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+
+
+
+            <div class="text-center my-5">
+                <a href="modify" class="btn text-light" style="background-color: #005B48; width: 70px;"
+                    onclick="return confirm('추천하시겠습니까?')">추천</a>
+                <a href="list" class="btn text-light" style="background-color: #005B48; width: 70px;">목록</a>
+                <a href="remove" class="btn btn-secondary text-light" style="width: 70px;">신고</a>
+            </div>
+    </div>
+    </main>
+    <footer class="bg-success text-center p-3">
+        <address></address>도네이션헤븐 기부천국 | 사업자등록번호 000-00-00000 | 조장 함형준 | 대표이사 함형준 서울특별시 구로구 디지털로 306, 203, 205, 212호
+        (구로동, 대륭포스트타워 2차) <br>| 대표전화 0000-0000 | 팩스 00-000-000
+        <p>All rights resereved &copy; copyright.</p>
+    </footer>
     </div>
 </body>
+
 </html>
