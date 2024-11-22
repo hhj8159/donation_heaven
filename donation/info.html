@@ -71,9 +71,9 @@
                         <div>
                           <div class="border"></div>
                         </div>
-                        <p class="position-absolute top-0 start-0 translate-middle border-radius rounded-pill fs-4 pt-2 bold-text" style="text-align: center; width: 24%; background-color: #9FA6B2;  width: 30%; height: 55px; color: white;">후원대상 선택</p>
-                        <p class="position-absolute top-0 start-50 translate-middle border-radius rounded-pill fs-4 pt-2 bold-text" style="text-align: center; width: 24%; background-color: #005B48;  width: 30%; height: 55px; color: white;">후원회원 정보</p>
-                        <p class="position-absolute top-0 start-100 translate-middle border-radius rounded-pill fs-4 pt-2 bold-text" style="text-align: center; width: 24%; background-color: #9FA6B2;  width: 30%; height: 55px; color: white;">후원금 납입</p>
+                        <p class="position-absolute top-0 start-0 translate-middle border-radius rounded-pill fs-4 pt-3 p-3 bold-text" style="text-align: center; background-color: #9FA6B2;  width: 30%; color: white;">후원대상 선택</p>
+                        <p class="position-absolute top-0 start-50 translate-middle border-radius rounded-pill fs-4 pt-3 p-3 bold-text" style="text-align: center; background-color: #005B48;  width: 30%; color: white;">후원회원 정보</p>
+                        <p class="position-absolute top-0 start-100 translate-middle border-radius rounded-pill fs-4 pt-3 p-3 bold-text" style="text-align: center; background-color: #9FA6B2;  width: 30%; color: white;">후원금 납입</p>
                     </div>
                     
                     <form>                                
@@ -91,18 +91,28 @@
                                 <li class="list-group px-3 col-2">이메일</li>
                                 <li class="list-group px-3 ">kimgd1234@naver.com</li>
                             </ul>
-                            <ul class="list-group list-group-horizontal my-3">
-                                <li class="list-group px-3 col-2">주소</li>
-                            </ul>
+                            <div class="col-md-10">
+                                <ul class="list-group list-group-horizontal my-3">
+                                    <li class="list-group px-3 me-3 col-2">주소</li>
+                                    <input type="text" class="form-control col-2 ms-3 me-2  py-2 w-50" placeholder="도로명주소">
+                                    <button class="btn btn-success py-2 col-3" type="button" style="width: 15%;" id="search">주소 검색</button>
+                                </ul>
+                                <ul class="list-group list-group-horizontal my-3">
+                                    <li class="list-group px-3 me-3 col-2"></li>
+                                    <input type="text" class="form-control col-2 ms-3 me-2 py-2 w-50" placeholder="기본주소" id="roadAddr">
+                                    <input type="text" class="form-control col-2 me-2 py-2 w-25" placeholder="상세주소" id="detailAddr">
+                                </ul>
+                            </div>
                             <hr class="border border-2 border-secondary">
                             
                         </div>
                     </form>
-                    <div class="d-grid col-3 mx-auto">
-                        <button class="btn mt-4 mb-5" style="border: 2px solid #005B48; color: #005B48; width: 75%; height: 40%;" >다음 단계</button>                
-                    </div>
                     
-                </div>
+                    <div class="d-flex col-6 mx-auto">
+                        <button type="button" class="btn btn-outline-success m-4 mb-5 w-75">이전 단계</button>                
+                        <button type="button" class="btn btn-outline-success m-4 mb-5 w-75">다음 단계</button> 
+                    </div>
+                </div>    
             </div> 
         </main>
         <footer class="text-center p-3 footer">
@@ -110,5 +120,47 @@
             <p>All rights resereved &copy; copyright.</p>
         </footer>
     </div>
+    <script>
+        // $("#search").click(function() {
+        //     const keyword = $(this).prev().val();
+        //     if(!keyword) return;
+
+        //     const data = {
+        //         keyword,
+        //         confmKey : 'devU01TX0FVVEgyMDI0MTAyOTEyMTYxNjExNTIwMDI=',
+        //         currentPage : 1,
+        //         countPerPage : 100,
+        //         resultType : 'json' 
+        //     };
+        //     console.log(data);
+            
+        //     $.ajax({
+        //         url : "https://business.juso.go.kr/addrlink/addrLinkApiJsonp.do",
+        //         type : 'get',
+        //         data,
+        //         dataType : 'jsonp',
+        //         crossDomain : true,
+        //         success : function(data) {
+        //             console.log(data.results.juso);
+
+        //             let str = '';
+        //             for(let i in data.results.juso) {
+        //                 str += `<li class="list-group-item"><a href="#" class="small">
+        //                     ${data.results.juso[i].roadAddr}</a></li>`;
+        //             }
+        //             $("ul.search-result-wrap").html(str);
+                                             
+        //         },
+        //         error : function(xhr, msg) {
+        //             console.log(msg);
+        //         }
+        //     })
+        //     $("ul.search-result-wrap").on("click", "a", function() {
+        //         $("#roadAddr").val($(this).text().trim());
+        //         $(this).closest("ul").empty();
+        //     })
+                
+        // })
+    </script>
 </body>
 </html>
