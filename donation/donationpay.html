@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Donation Heaven</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+   <!-- bootstrap  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <!-- jquery -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <!-- bxslider -->
+   <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+   <!-- font-awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+   <link rel='stylesheet' type='text/css'href='../font/font.css'>
+   <style>
+        .font-color {color: #005B48; font-size: 25px;}
+        body{
+            font-family: 'MinSans', sans-serif;
+        }
+        .donation {background-color: #005B48; color: white; font-size: 30px; margin-right: 30px; }
+        .signup {margin-right: 20px;}
+        .sign {margin-top: 50px; color: #005B48;}
+        .sign a:link { color: #005B48; }
+        .donation:hover { color: #005B48;}
+        .footer {background-color: #005B48; color: white;}
+        .block {display: block;}
+        .none {display: none;}
+        
+    </style>
+   <body>
+    <div class="wrap">
+        <header class="container-fluid">     
+            <nav class="navbar bg-white navbar-expand-sm">
+                <ul class="navbar-nav container justify-content-start">
+                    <a href="index.html" class="float-start"><img src="../img/logo.png" alt="로고" class="img-fluid" width="250"></a>
+                    <li class="mx-3 nav-item"><a class="nav-link text-success" href="index.html"><b class="font-color">공지사항</b></a></li>
+                    <li class="mx-3 nav-item"><a class="nav-link text-success" href="mypage.html"><b class="font-color">자료실</b></a></li>
+                    <li class="mx-3 nav-item"><a class="nav-link text-success" href="post.html?category=1"><b class="font-color">봉사인증</b></a></li>
+                    <li class="mx-3 nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-success" href="#" role="button" data-bs-toggle="dropdown"><b class="font-color">커뮤니티</b></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="post.html?category=2">자유게시판</a></li>
+                            <li><a class="dropdown-item" href="post.html?category=3">질문과답변</a></li>
+                        </ul>
+                    </li>
+                    
+                    
+                </ul>
+                <ul class="sign">
+                       <a href="signin" class="small float-start text-decoration-none">로그인</a>
+                       <a href="#" class="small float-start text-decoration-none vertical mx-3"><p> | </p></a>
+                       <a href="signup.html" class="small float-start text-decoration-none signup">회원가입</a>
+                
+                </ul>
+                <a href="donation" class="btn btn-block btn-sm col-1 donation">후원하기</a>
+               
+            </nav>
+        </header>
+        <main class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-9">
+                    <div class="py-2">
+                        <h2 class="bold-text my-3 mt-3 mb-4">후원 신청하기</h2>
+                    </div>
+
+
+                    <div class="block" id="select">
+                        <div class="position-relative mx-auto mb-5 mt-5" style="width: 80%;">
+                            <div>
+                            <div class="border"></div>
+                            </div>
+                            <p class="position-absolute top-0 start-0 translate-middle border-radius rounded-pill fs-4 pt-3 p-3 bold-text" style="text-align: center; background-color: #005B48;  width: 30%; color: white;">후원대상 선택</p>
+                            <p class="position-absolute top-0 start-50 translate-middle border-radius rounded-pill fs-4 pt-3 p-3 bold-text" style="text-align: center; background-color: #9FA6B2;  width: 30%; color: white;">후원회원 정보</p>
+                            <p class="position-absolute top-0 start-100 translate-middle border-radius rounded-pill fs-4 pt-3 p-3 bold-text" style="text-align: center; background-color: #9FA6B2;  width: 30%; color: white;">후원금 납입</p>
+                        </div>
+                        
+                        <form>                                
+                            <div class="d-grid col-10 mx-auto">
+                                <hr class="border border-2 border-secondary">
+                                <ul class="list-group list-group-horizontal form-check my-3">
+                                    <li class="list-group px-3 col-2">후원방식</li>
+                                    <li class="list-group px-3 col-2"><label class="radio-inline"><input class="form-check-input mx-1" type="radio" name="donadate" checked>정기후원</label></li>
+                                    <li class="list-group px-3 col-2"><label class="radio-inline"><input class="form-check-input mx-1" type="radio" name="donadate">일시후원</label></li>
+                                </ul>
+                                <ul class="list-group list-group-horizontal form-check mb-2 mt-3">
+                                    <li class="list-group px-3 col-2">후원종류</li>
+                                    <li class="list-group px-3 col-2"><label class="radio-inline"><input class="form-check-input mx-1" type="radio" name="donatype" checked>독거노인</label></li>
+                                    <li class="list-group px-3 col-2"><label class="radio-inline"><input class="form-check-input mx-1" type="radio" name="donatype">결식아동</label></li>
+                                    <li class="list-group px-3 col-2"><label class="radio-inline"><input class="form-check-input mx-1" type="radio" name="donatype">한부모가정</label></li>
+                                    <li class="list-group px-3 col-2"><label class="radio-inline"><input class="form-check-input mx-1" type="radio" name="donatype">장애인</label></li>
+                                </ul>
+                                <div class="list-group list-group-horizontal my-3">
+                                    <p class="list-group px-3 mt-2 col-2">후원금액</p>
+                                    <div class="col-3 px-3">
+                                        <select class="form-select">
+                                            <option value="직접입력">직접입력</option>
+                                            <option value="10,000">10,000</option>
+                                            <option value="50,000">50,000</option>
+                                            <option value="100,000">100,000</option>
+                                        </select>
+                                    </div>
+                                    <p class="list-group ps-1"><input class="form-control text-end" type="text" name="donadate" placeholder="직접입력"></p>
+                                </div>
+                                <hr class="border border-2 border-secondary">
+                                <div>
+                                    <ul class="list-group list-group-horizontal float-end">
+                                        <li class="list-group me-3 pt-2">총 후원금액</li>
+                                        <li class="list-group me-1 ms-5 fs-4">0</li>                                    
+                                        <li class="list-group me-3 pt-2">원</li>
+                                    </ul>
+                                </div>
+                                <hr class="border border-1 border-secondary">
+                            </div>
+                        </form>
+                        <div class="d-flex col-3 mx-auto">
+                            <button type="button" class="btn btn-outline-success m-4 mb-5 w-75" id="nextbtn1">다음 단계</button>
+                        </div>
+                    </div>
+
+
+                    <div class="none" id="info">
+                        <div class="position-relative mx-auto mb-5 mt-5" style="width: 80%;">
+                            <div>
+                            <div class="border"></div>
+                            </div>
+                            <p class="position-absolute top-0 start-0 translate-middle border-radius rounded-pill fs-4 pt-3 p-3 bold-text" style="text-align: center; background-color: #9FA6B2;  width: 30%; color: white;">후원대상 선택</p>
+                            <p class="position-absolute top-0 start-50 translate-middle border-radius rounded-pill fs-4 pt-3 p-3 bold-text" style="text-align: center; background-color: #005B48;  width: 30%; color: white;">후원회원 정보</p>
+                            <p class="position-absolute top-0 start-100 translate-middle border-radius rounded-pill fs-4 pt-3 p-3 bold-text" style="text-align: center; background-color: #9FA6B2;  width: 30%; color: white;">후원금 납입</p>
+                        </div>
+                        
+                        <form>                                
+                            <div class="d-grid col-10 mx-auto">
+                                <hr class="border border-2 border-secondary">
+                                <ul class="list-group list-group-horizontal form-check my-3">
+                                    <li class="list-group px-3 col-2">이름</li>
+                                    <li class="list-group px-3 ">김길동</li>
+                                </ul>
+                                <ul class="list-group list-group-horizontal form-check my-3">
+                                    <li class="list-group px-3 col-2">휴대전화</li>
+                                    <li class="list-group px-3 ">010-1234-5678</li>
+                                </ul>   
+                                <ul class="list-group list-group-horizontal my-3">
+                                    <li class="list-group px-3 col-2">이메일</li>
+                                    <li class="list-group px-3 ">kimgd1234@naver.com</li>
+                                </ul>
+                                <div class="col-md-10">
+                                    <div class="list-group list-group-horizontal my-3">
+                                        <p class="list-group px-3 me-3 col-2">주소</p>
+                                        <input type="text" class="form-control col-2 ms-3 me-2  py-2 w-50" id="roadAddr" name="addr" placeholder="도로명주소">
+                                        <button class="btn btn-success py-2 col-3" type="button" style="width: 15%;" id="search">주소 검색</button>
+                                    </div>
+                                    <div class="list-group list-group-horizontal my-3">
+                                        <p class="list-group px-3 me-3 col-2"></p>
+                                        <input type="text" class="form-control col-2 ms-3 me-2 py-2 w-50" placeholder="상세주소" id="detailAddr">
+                                    </div>
+                                    <ul class="list-group search-result-wrap mb-3 w-50" style="margin-left: 15%;" >
+                
+                                    </ul>
+                                </div>
+                                <hr class="border border-2 border-secondary">
+                                
+                            </div>
+                        </form>                        
+                        <div class="d-flex col-6 mx-auto">
+                            <button type="button" class="btn btn-outline-success m-4 mb-5 w-75" id="prebtn1">이전 단계</button>                
+                            <button type="button" class="btn btn-outline-success m-4 mb-5 w-75" id="nextbtn2">다음 단계</button> 
+                        </div>
+                    </div>
+
+                    
+                    <div class="none" id="pay">
+                        <div class="position-relative mx-auto mb-5 mt-5" style="width: 80%;">
+                            <div>
+                              <div class="border"></div>
+                            </div>
+                            <p class="position-absolute top-0 start-0 translate-middle border-radius rounded-pill fs-4 pt-3 p-3 bold-text" style="text-align: center; background-color: #9FA6B2;  width: 30%; color: white;">후원대상 선택</p>
+                            <p class="position-absolute top-0 start-50 translate-middle border-radius rounded-pill fs-4 pt-3 p-3 bold-text" style="text-align: center; background-color: #9FA6B2;  width: 30%; color: white;">후원회원 정보</p>
+                            <p class="position-absolute top-0 start-100 translate-middle border-radius rounded-pill fs-4 pt-3 p-3 bold-text" style="text-align: center; background-color: #005B48;  width: 30%; color: white;">후원금 납입</p>
+                        </div>
+                        
+                        <form>                                
+                            <div class="d-grid col-10 mx-auto"> 
+                                <hr class="border border-2 border-secondary">
+                                <ul class="list-group list-group-horizontal form-check my-3">
+                                    <li class="list-group px-3 col-2">납입방법</li>                                
+                                </ul>
+                                <div>
+                                    <div class="d-flex col-12 mx-auto">
+                                        <button type="button" class="btn btn-outline-success mt-4 mb-5 mx-4 py-2 w-75 fs-4 bold-text">신용카드</button>                
+                                        <button type="button" class="btn btn-outline-success mt-4 mb-5 mx-4 py-2 w-75 fs-4 bold-text">계좌이체</button>                
+                                        <button type="button" class="btn btn-outline-success mt-4 mb-5 mx-4 py-2 w-75 fs-4 bold-text">무통장입금</button>                
+                                    </div>             
+                                </div>                           
+                               
+                                <hr class="border border-2 border-secondary">                            
+                            </div>
+                        </form>
+                        <div>
+                            <div class="d-flex col-6 mx-auto">
+                                <button type="button" class="btn btn-outline-success m-4 mb-5 w-75" id="prebtn2">이전 단계</button>                
+                                <button type="button" class="btn btn-outline-success m-4 mb-5 w-75" id="donabtn">후원 신청하기</button> 
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div> 
+        </main>
+        <footer class="text-center p-3 footer">
+            <address></address>도네이션헤븐 기부천국 | 사업자등록번호 000-00-00000 | 조장 함형준 | 서울특별시 구로구 디지털로 306, 203, 205, 212호 (구로동, 대륭포스트타워 2차) <br>| 대표전화 0000-0000 | 팩스 00-000-000 
+            <p>All rights resereved &copy; copyright.</p>
+        </footer>
+    </div>
+    
+    
+    <script>
+        
+        $(function() {    
+            $("#nextbtn1").click(function(){
+                event.preventDefault();
+                $("#select").removeClass("block").addClass("none");        
+                $("#info").removeClass("none").addClass("block");
+            })
+            $("#nextbtn2").click(function(){
+                event.preventDefault();
+                $("#info").removeClass("block").addClass("none");
+                $("#pay").removeClass("none").addClass("block");                
+            })
+            $("#prebtn1").click(function(){
+                event.preventDefault();
+                $("#info").removeClass("block").addClass("none");
+                $("#select").removeClass("none").addClass("block");                
+            })
+            $("#prebtn2").click(function(){
+                event.preventDefault();
+                $("#pay").removeClass("block").addClass("none");
+                $("#info").removeClass("none").addClass("block");                
+            })
+            
+
+            
+            $("#search").click(function() {
+                event.preventDefault
+
+                const keyword = $(this).prev().val();
+                if(!keyword) {
+                    return;
+                }
+                const data = {
+                    keyword,
+                    confmKey : 'devU01TX0FVVEgyMDI0MTAyOTEyMTYxNjExNTIwMDI=',
+                    currentPage : 1,
+                    countPerPage : 100,
+                    resultType : 'json' 
+                };
+                console.log(data);
+                
+                $.ajax({
+                    url : "https://business.juso.go.kr/addrlink/addrLinkApiJsonp.do",
+                    type : 'get',
+                    data,
+                    dataType : 'jsonp',
+                    crossDomain : true,
+                    success : function(data) {
+                        console.log(data.results.juso);
+
+                        let str = '';
+                        for(let i in data.results.juso) {
+                            str += `<li class="list-group-item"><a href="#" class="small">
+                                ${data.results.juso[i].roadAddr}</a></li>`;
+                        }
+                        $("ul.search-result-wrap").html(str);
+                                                    
+                    },
+                    error : function(xhr, msg) {
+                        console.log(msg);
+                    }
+                })
+
+                $("ul.search-result-wrap").on("click", "a", function() {
+                    $("#roadAddr").val($(this).text().trim());
+                    $(this).closest("ul.search-result-wrap").empty();
+                })                
+            })
+
+
+
+
+
+
+})
+</script>
+</body>
+</html>
